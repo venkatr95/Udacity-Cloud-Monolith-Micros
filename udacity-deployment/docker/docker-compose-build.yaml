@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: scheele/reverseproxy 
+  backend_user:
+    build:
+      context: ../../udacity-api-user
+    image: be41zehe/udagram-api-user
+  backend_feed:
+    build:
+      context: ../../udagram-api-feed  
+    image: be41zehe/udagram-api-feed
+  frontend:
+    build:
+      context: ../../udagram-frontend  
+    image: be41zehe/udagram-frontend

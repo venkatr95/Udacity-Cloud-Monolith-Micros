@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - 13
+services:
+  - docker
+
+# Pre-testing installs all
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+  - cd udagram-reverse-proxy
+
+script:
+  - docker --version # print the version for logging
+  - docker build -t udagram-reverse-proxy .
+  - docker tag udagram-reverse-proxy be41zehe/udagram-reverse-proxy
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push be41zehe/udagram-reverse-proxy
