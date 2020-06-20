@@ -3,7 +3,7 @@ services:
   reverseproxy:
     build:
       context: .
-    image: scheele/reverseproxy 
+    image: be41zehe/udagram-reverse-proxy
   backend_user:
     build:
       context: ../../udacity-api-user
