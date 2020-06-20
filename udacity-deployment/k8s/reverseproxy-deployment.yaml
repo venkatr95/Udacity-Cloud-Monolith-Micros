@@ -19,3 +19,13 @@ spec:
         image: be41zehe/udagram-reverse-proxy
         ports:
         - containerPort: 8080
+        imagePullPolicy: Always          
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+        ports:
+        - containerPort: 8080

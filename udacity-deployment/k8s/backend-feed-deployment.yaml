@@ -15,7 +15,7 @@ spec:
         app: userfeed
     spec:
       containers:
-      - name: frontend
+      - name: userfeed
         image: be41zehe/udagram-api-feed
         ports:
         - containerPort: 8080
