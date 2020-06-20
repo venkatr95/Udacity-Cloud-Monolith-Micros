@@ -19,5 +19,3 @@ spec:
         image: be41zehe/udagram-reverse-proxy
         ports:
         - containerPort: 8080
-      restartPolicy: false
-
