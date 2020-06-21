@@ -1,2 +1,6 @@
 # Environment
 set_env.sh
+
+udacity-deployment/k8s/aws-secret.yaml
+udacity-deployment/k8s/env-secret.yaml
+udacity-deployment/k8s/env-configmap.yaml
