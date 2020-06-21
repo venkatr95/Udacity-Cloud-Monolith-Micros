@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: be41zehe/udagram-frontend
+        image: be41zehe/udagram-frontend:latest
         ports:
         - containerPort: 8080
         resources:

@@ -37,6 +37,21 @@ spec:
             configMapKeyRef:
               name: env-config
               key: JWT_SECRET
+        - name: AWS_BUCKET
+          valueFrom:
+            configMapKeyRef:
+              name: env-config           
+              key: AWS_BUCKET
+        - name: AWS_REGION
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: AWS_REGION
+        - name: AWS_PROFILE
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: AWS_PROFILE
         - name: POSTGRES_DB
           valueFrom:
             configMapKeyRef:
